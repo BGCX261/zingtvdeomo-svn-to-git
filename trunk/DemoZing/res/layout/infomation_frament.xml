@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/titlevideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="Tập 4"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titlevideo"
+            android:text="Ngày phát hành"
+            android:textColor="#AFAFAE" />
+
+        <TextView
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:paddingBottom="5dp"
+            android:text="100,000 lượt xem"
+            android:textColor="#AFAFAE" />
+       <include  layout="@layout/rate_and_like"
+           android:layout_width="wrap_content"
+           android:layout_below="@id/view"
+           android:layout_height="wrap_content"/>
+
+       <ImageButton
+           android:id="@+id/btn_download"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:src="@drawable/ic_action_download" />
+
+    </RelativeLayout>
+
+    <include  layout="@layout/program"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+</RelativeLayout>
